@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,700&display=swap');
+
+*{
+  font-family: 'Nunito' !important
+}
+/* h1,h2{
+  font-family: 'Nunito';
+} */
+.navbar{
+  background-color: #ffb031;
+  color: #ebebeb;
+}
+a{
+  text-decoration: none;
+  color: #fff;
+}
+
+
+.header-home{
+  margin-bottom: 2%;
+}
+.example-card {
+    width: 800px;
+    margin: 8px;
+  }
+  mat-grid-tile {
+    background: lightblue;
+  }
+  .Main{
+ margin-left: 5%;
+ margin-right: 5%;
+  }
+  .card-horizontal {
+    display: flex;
+    flex: 1 1 auto;
+}
+h1{
+  margin: 0;
+}
+h2{
+  margin: 0;
+}
+.card{
+  border-radius: 1.25rem !important;
+  border: 1.5px dotted #ffb031;
+}
+.profile-details{
+  margin-top: 22px;
+  margin-left: 15px;
+}
+.card-header{
+  padding: 5px;
+}
+.card-block{
+  margin: auto !important;
+}
+img{
+  border-radius: 50%;
+}
+div>p+a{
+    margin-bottom: 10% !important;
+    background-color: #ffb031;
+    color: #ebebeb;
+    border: none;
+    border-radius: 15px;
+    padding: 5px 10px;
+    text-decoration: none;
+}
+
+div>p+a:hover{
+  background-color: #fff;
+  color: #ffb031;
+  border: 2px solid #ffb031;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+
+

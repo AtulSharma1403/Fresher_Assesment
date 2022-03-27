@@ -1,0 +1,101 @@
+<div class="header-home">
+  <nav class="navbar px-4">
+    <h2 class="navbar-brand"><a [routerLink]="['/home',this.username]">
+      Home</a></h2>
+    <form class="form-inline">
+      <span style="font-size: 15px;">Hello, {{ username ? username : 'Guest!' }}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span> <a
+         style="font-size: 15px;" (click)="userLogout()">Logout</a>
+        
+    </form>
+  </nav>
+</div>
+<div class="Main">
+  <h1 style="margin-top: 3%; font-weight: 500; margin-bottom: 1%;">{{item_name}} <span style="font-weight: 300;">(@username_handle)</span></h1>
+
+
+
+</div>
+
+
+  <!-- <app-child1 
+  [name]="item_name"
+  [id]="item_id"
+  [email]="item_email"
+  [phone]="item_phone"
+  [website]="item_website"
+  [street]="item_street"
+  [suite]="item_suite"
+  [zipcode]="item_zipcode"
+  [city]="item_city">
+
+</app-child1>
+<router-outlet>  </router-outlet> -->
+  
+  
+   
+
+                   
+<div class="container mt-3">
+  
+  <br>
+
+  <ul class="nav nav-tabs" role="tablist">
+    <li class="nav-item">
+      <a class="nav-link active" data-bs-toggle="tab" href="#home">Profile Details</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" data-bs-toggle="tab" href="#menu1">User details</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" data-bs-toggle="tab" href="#menu2">Posts</a>
+    </li>
+  </ul>
+
+  <!-- Tab panes -->
+  <div class="tab-content">
+    <div id="home" class="container tab-pane active"><br>
+      <div class="container">
+      
+          <div class="container">
+              <div class="row">
+              <div  class="col">
+                  <img height="250px;" width="250px" src="https://png.pngtree.com/png-vector/20191101/ourmid/pngtree-male-avatar-simple-cartoon-design-png-image_1934458.jpg"
+                  alt="user profile image" alt="">
+              </div>
+              <div class="col">
+              <h3 style="margin-top: 30px;"><span style="font-weight: 600;">Email: </span> {{item_email}}</h3>
+              <h3 style="margin-top: 30px;"><span style="font-weight: 600;">Company Name: </span> {{item_company}}</h3>
+              <h3 style="margin-top: 30px;"><span style="font-weight: 600;">Address: </span> {{item_street}}, {{item_suite}}, {{item_zipcode}}, {{item_city}}</h3>
+              </div>
+              <div class="col">
+
+                  <h3 style="margin-top: 30px;"><span style="font-weight: 600;">Phone: </span> {{item_phone}}</h3>
+                  <h3 style="margin-top: 30px;"><span style="font-weight: 600;">Website: </span> {{item_website}}</h3>
+              </div>
+              </div>
+          </div>
+          </div>
+    </div>
+    <div id="menu1" class="container tab-pane fade"><br>
+      <div class="container">
+          <div class="row">
+            <div style="text-align: center;"  class="col">
+              <img height="300px;" width="350px" src="https://images.unsplash.com/photo-1610621062045-ef5f7201bb3f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8YmxhY2slMjBhbmQlMjB3aGl0ZSUyMHBob3RvZ3JhcGh5fGVufDB8fDB8fA%3D%3D&w=1000&q=80" alt="">
+            </div>
+            <div style="margin-left: 10px;" class="col">
+              <img height="300px;" width="350px" src="https://media.istockphoto.com/photos/tropical-banana-palm-leaf-picture-id922764830?k=20&m=922764830&s=612x612&w=0&h=_fLyqDdIKNK7Q6FDO7MMYszIjmB52oXl4eBaWaElhAw=" alt="">
+            </div>
+       
+          </div>
+        </div>
+    </div>
+    <div id="menu2" class="container tab-pane fade"><br>
+      <h3 style="font-weight: 600;">it was a good day!</h3>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae sit eligendi adipisci! Minima modi atque alias quas esse error, sint itaque minus eum repellendus ut beatae eaque omnis, ad molestias.</p>
+      <h3 style="font-weight: 600;">Meh</h3>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum ipsa repellendus harum fugiat itaque nostrum delectus veritatis odio adipisci nemo quod quas, necessitatibus odit sunt earum consequuntur sapiente neque inventore.</p>
+    </div>
+  </div>
+</div>
+  
+

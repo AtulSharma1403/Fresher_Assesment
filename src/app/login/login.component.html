@@ -1,0 +1,27 @@
+<div class="container">
+<mat-card class="example-card">
+    <h4>SOCIAL GROVE</h4>
+    <mat-card-content>
+        <form class="example-form">
+            <mat-form-field class="example-full-width" appearance="fill">
+              <mat-label>Email</mat-label>
+              <input matInput placeholder="atul@gmail.com" [(ngModel)]="username" name="username" required>
+            </mat-form-field>
+          </form>
+          <form class="example-form">
+            <mat-form-field class="example-full-width" appearance="fill">
+              <mat-label>Password</mat-label>
+                <input matInput matInput [type]="showPassword ? 'text' : 'password'" name="password" placeholder="12345" [(ngModel)]="password "type="password" name="password" required>
+                <mat-icon matSuffix (click)="togglePasswordVisibility()">
+                  {{showPassword?'visibility_off':'visibility'}}
+              </mat-icon>
+              </mat-form-field>
+          </form>
+          <button style="display:block; margin: 0 auto; width: 40%; background-color: #ffb031; font-family: 'Nunito';" mat-raised-button color="primary"   (click)="onLoginClick()">Login</button>
+    </mat-card-content>
+  </mat-card>
+</div>
+
+
+<!--  -->
+
