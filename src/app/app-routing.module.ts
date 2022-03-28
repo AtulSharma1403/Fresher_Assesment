@@ -4,13 +4,14 @@ import { CommonModule } from '@angular/common';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
 import { ChildComponent } from './child/child.component';
-import { AuthGuard } from './shared/auth.guard';
+import { AuthenticationGuard } from './authentication.guard';
+
 const ROUTES: Route[] = [
   { path: '',   redirectTo: '/login', pathMatch: 'full' },
   { path: 'login', component: LoginComponent},
-  { path: 'home/:username', component: HomeComponent},
+  { path: 'home/:username', component: HomeComponent,canActivate:[AuthenticationGuard]},
    {path: 'home/:username/:id/:name/:email/:phone/:website/:street/:suite/:city/:zipcode/:company', component: ChildComponent,
-   canActivate:[AuthGuard]  },
+},
 ]
 @NgModule({
   imports: [

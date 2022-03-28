@@ -27,14 +27,17 @@ export class LoginComponent implements OnInit {
   public onLoginClick() {
     if (this.password == 'pass@123') {
       // local storage to manage the session ko locally
-      localStorage.setItem('userName', this.username);
-      console.log("Userlogged in with token",this.username);
+      // localStorage.setItem('userName', this.username);
+      // console.log("Userlogged in with token",this.username);
+      localStorage.setItem('SeesionUser',this.username) 
       this.router.navigate(['./home', this.username]);
     } else {
       alert('Invalid credentials');
     }
   }
-  ngOnInit(): void {}
+  ngOnInit() {  
+    localStorage.setItem('SeesionUser',this.username)  
+ }  
   public togglePasswordVisibility(): void {
     this.showPassword = !this.showPassword;
  

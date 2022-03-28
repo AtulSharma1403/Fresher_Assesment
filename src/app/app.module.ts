@@ -19,6 +19,7 @@ import { CommonModule } from '@angular/common';
 import { HeaderComponent } from './header/header.component';
 import { Ng2SearchPipeModule } from 'ng2-search-filter';
 import {MatIconModule} from '@angular/material/icon';
+import { AuthguardserviceService } from './authguardservice.service';
 
 
 
@@ -47,7 +48,9 @@ import {MatIconModule} from '@angular/material/icon';
     Ng2SearchPipeModule,
 
   ],
-  providers: [],
+  providers: [
+    AuthguardserviceService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
