@@ -1,30 +1,27 @@
 import { Component, OnInit } from '@angular/core';
-import {UserServiceService} from '../user-service.service'
+import { UserServiceService } from '../user-service.service';
 import { ActivatedRoute, Router } from '@angular/router';
 @Component({
   selector: 'app-child',
   templateUrl: './child.component.html',
-  styleUrls: ['./child.component.css']
+  styleUrls: ['./child.component.css'],
 })
 export class ChildComponent implements OnInit {
-  username:string
+  username: string;
   item_id: string;
   item_name: string;
-  item_email:string;
-  item_phone:string;
-  item_website:string;
-  item_street:string;
-  item_suite:string;
-  item_zipcode:string;
-  item_city:string;
-  item_company:string
-  
- 
+  item_email: string;
+  item_phone: string;
+  item_website: string;
+  item_street: string;
+  item_suite: string;
+  item_zipcode: string;
+  item_city: string;
+  item_company: string;
 
-  constructor(private actRoute: ActivatedRoute,
-    private router: Router) {
+  constructor(private actRoute: ActivatedRoute, private router: Router) {
     this.username = this.actRoute.snapshot.params['username'];
-       console.log(this.username)
+    console.log(this.username);
     this.item_id = this.actRoute.snapshot.params['id'];
     // console.log(this.item_id)
     this.item_name = this.actRoute.snapshot.params['name'];
@@ -42,20 +39,15 @@ export class ChildComponent implements OnInit {
     this.item_zipcode = this.actRoute.snapshot.params['zipcode'];
     // console.log(this.item_zipcode)
     this.item_company = this.actRoute.snapshot.params['company'];
-    console.log(this.item_company)
-
+    console.log(this.item_company);
   }
-  
-  
-  public userLogout(){
+
+  public userLogout() {
     localStorage.clear();
 
     this.router.navigate(['/login']);
-    console.log("tata");
-    
-   }
-
-  ngOnInit() {
-    
+    // console.log('tata');
   }
+
+  ngOnInit() {}
 }

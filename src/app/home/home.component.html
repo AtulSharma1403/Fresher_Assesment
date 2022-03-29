@@ -1,12 +1,13 @@
 <!-- <app-header></app-header> -->
 <div class="header-home">
   <nav class="navbar px-4">
-       <h2 class="navbar-brand"><a [routerLink]="['/home',this.username]">
-      Home</a></h2>
+    <h2 class="navbar-brand"><a [routerLink]="['/home',this.username]">
+        Home</a></h2>
     <form class="form-inline">
-      <span style="font-size: 15px;">Hello, {{ username ? username : 'Guest!' }}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span> 
+      <span style="font-size: 15px;">Hello, {{ username ? username : 'Guest!'
+        }}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
       <a style="font-size: 15px;" (click)="userLogout()">Logout</a>
-   </form>
+    </form>
   </nav>
 </div>
 
@@ -46,5 +47,3 @@
             </div>
           </div>
         </div>
-
-        

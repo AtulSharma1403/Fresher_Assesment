@@ -7,17 +7,21 @@ import { ChildComponent } from './child/child.component';
 import { AuthenticationGuard } from './authentication.guard';
 
 const ROUTES: Route[] = [
-  { path: '',   redirectTo: '/login', pathMatch: 'full' },
-  { path: 'login', component: LoginComponent},
-  { path: 'home/:username', component: HomeComponent,canActivate:[AuthenticationGuard]},
-   {path: 'home/:username/:id/:name/:email/:phone/:website/:street/:suite/:city/:zipcode/:company', component: ChildComponent,
-},
-]
+  { path: '', redirectTo: '/login', pathMatch: 'full' },
+  { path: 'login', component: LoginComponent },
+  {
+    path: 'home/:username',
+    component: HomeComponent,
+    canActivate: [AuthenticationGuard],
+  },
+  {
+    path: 'home/:username/:id/:name/:email/:phone/:website/:street/:suite/:city/:zipcode/:company',
+    component: ChildComponent,
+    canActivate: [AuthenticationGuard],
+  },
+];
 @NgModule({
-  imports: [
-    CommonModule,
-    RouterModule.forRoot(ROUTES)
-  ],
-  exports: [RouterModule]
+  imports: [CommonModule, RouterModule.forRoot(ROUTES)],
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

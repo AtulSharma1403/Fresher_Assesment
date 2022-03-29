@@ -1,33 +1,32 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,700&display=swap");
 
 /* *{
   font-family: 'Nunito', sans-serif;
 } */
-.container{
-    display:flex;
-    justify-content: center;
-    padding: 10%;
- }
- h4{
-   font-family: 'Nunito';
-  text-align:center;
+.container {
+  display: flex;
+  justify-content: center;
+  padding: 10%;
+}
+h4 {
+  font-family: "Nunito";
+  text-align: center;
   font-size: 25px;
   margin-bottom: 7%;
   font-weight: 700;
   text-decoration: overline;
- }
+}
 .example-card {
-    max-width: 400px;
-    margin-bottom: 8px;
-    flex: 1;
-  }
-  .example-form {
-    min-width: 150px;
-    max-width: 500px;
-    width: 100%;
-  }
- .example-full-width {
-    width: 100%;
-    font-family: 'Nunito';
-  }
-  
+  max-width: 400px;
+  margin-bottom: 8px;
+  flex: 1;
+}
+.example-form {
+  min-width: 150px;
+  max-width: 500px;
+  width: 100%;
+}
+.example-full-width {
+  width: 100%;
+  font-family: "Nunito";
+}
